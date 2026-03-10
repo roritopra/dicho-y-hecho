@@ -96,7 +96,7 @@ export default function WhyUs() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="relative aspect-[4/3] lg:aspect-square w-full lg:flex-1"
+          className="relative aspect-4/3 lg:aspect-square w-full lg:flex-1"
         >
           <Image
             src="/why_us.png"

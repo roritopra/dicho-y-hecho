@@ -10,17 +10,45 @@ import {
   Select,
   TextArea,
   TextField,
+  Alert,
 } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import { motion } from "motion/react";
+import React, { useState } from "react";
 
 export default function ContactForm() {
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true);
+    setStatus("idle");
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData);
-    console.log("Form data:", data);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        e.currentTarget.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error("Error al enviar formulario:", error);
+      setStatus("error");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -174,15 +202,56 @@ export default function ContactForm() {
               <Button
                 size="lg"
                 type="submit"
+                isDisabled={isLoading}
                 className="w-full rounded-lg bg-linear-to-r from-[#0042e9] via-[#0055ee] to-[#0071f5] text-base md:text-lg font-semibold text-white shadow-lg transition-transform hover:-translate-y-1 hover:shadow-xl active:scale-95"
               >
-                Enviar y proteger mi derecho
-                <Icon
-                  icon="heroicons:arrow-up-right-20-solid"
-                  className="text-2xl"
-                />
+                {isLoading ? "Enviando..." : "Enviar y proteger mi derecho"}
+                {!isLoading && (
+                  <Icon
+                    icon="heroicons:arrow-up-right-20-solid"
+                    className="text-2xl"
+                  />
+                )}
               </Button>
             </motion.div>
+
+            {/* Alerts Feedback */}
+            {status === "success" && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="w-full"
+              >
+                <Alert status="success">
+                  <Alert.Indicator />
+                  <Alert.Content>
+                    <Alert.Title>Mensaje enviado correctamente</Alert.Title>
+                    <Alert.Description>
+                      Nos pondremos en contacto contigo lo más pronto posible.
+                    </Alert.Description>
+                  </Alert.Content>
+                </Alert>
+              </motion.div>
+            )}
+
+            {status === "error" && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="w-full"
+              >
+                <Alert status="danger">
+                  <Alert.Indicator />
+                  <Alert.Content>
+                    <Alert.Title>Ocurrió un error</Alert.Title>
+                    <Alert.Description>
+                      No se pudo enviar tu mensaje. Por favor intenta de nuevo
+                      más tarde o comunícate vía WhatsApp.
+                    </Alert.Description>
+                  </Alert.Content>
+                </Alert>
+              </motion.div>
+            )}
           </Form>
         </motion.div>
 
