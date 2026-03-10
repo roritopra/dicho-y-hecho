@@ -102,6 +102,7 @@ export default function WhyUs() {
             src="/why_us.png"
             alt="¿Por qué elegir Dicho y Hecho?"
             fill
+            sizes="(max-width: 1024px) 100vw, 600px"
             className="rounded-2xl object-cover lg:object-contain"
           />
         </motion.div>

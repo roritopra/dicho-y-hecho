@@ -15,11 +15,12 @@ import {
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import { motion } from "motion/react";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const formRef = useRef<HTMLFormElement>(null);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -39,7 +40,7 @@ export default function ContactForm() {
 
       if (response.ok) {
         setStatus("success");
-        e.currentTarget.reset();
+        formRef.current?.reset();
       } else {
         setStatus("error");
       }
@@ -73,6 +74,7 @@ export default function ContactForm() {
           </motion.h2>
 
           <Form
+            ref={formRef}
             className="flex w-full flex-col gap-6 md:gap-8"
             onSubmit={onSubmit}
           >
@@ -267,12 +269,13 @@ export default function ContactForm() {
             <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.5 }}
-              className="w-full h-full"
+              className="w-full h-full relative"
             >
               <Image
                 src="/form_image.png"
                 alt="Contacto"
                 fill
+                sizes="(max-width: 1024px) 100vw, 500px"
                 className="object-cover"
               />
             </motion.div>

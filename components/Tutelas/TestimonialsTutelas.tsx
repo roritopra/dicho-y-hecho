@@ -107,6 +107,7 @@ export default function TestimonialsTutelas() {
                   src={t.image}
                   alt={t.name}
                   fill
+                  sizes="(max-width: 768px) 128px, 160px"
                   className="object-cover"
                 />
               </div>
