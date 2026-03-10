@@ -17,12 +17,9 @@ export async function POST(req: Request) {
       );
     }
 
-    // Configura el correo destinatario usando una variable de entorno o un fallback
-    const destinatario = process.env.RESEND_TEST_EMAIL || email;
-
     const { data: emailData, error } = await resend.emails.send({
-      from: "Dicho y Hecho <onboarding@resend.dev>",
-      to: typeof destinatario === "string" ? destinatario : email,
+      from: "Dicho y Hecho <info@derechoalderecho.co>",
+      to: ["info@derechoalderecho.co", email],
       replyTo: email,
       subject: `Nuevo contacto web - ${service}`,
       react: ContactTemplate({
