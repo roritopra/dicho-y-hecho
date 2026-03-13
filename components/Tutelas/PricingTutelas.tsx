@@ -2,6 +2,7 @@
 
 import { Button, Card } from "@heroui/react";
 import { motion } from "motion/react";
+import { Icon } from "@iconify/react";
 
 export default function PricingTutelas() {
   return (
@@ -14,8 +15,8 @@ export default function PricingTutelas() {
         transition={{ duration: 0.6 }}
         className="flex flex-col items-center gap-4 text-center"
       >
-        <h2 className="text-3xl font-medium text-[#444444] md:text-5xl">
-          Planes claros para ejercer tus derechos
+        <h2 className="text-3xl md:text-5xl font-semibold text-[#212d51] mb-6 tracking-tight">
+          Planes claros para <span className="text-[#003df5]">ejercer tus derechos</span>
         </h2>
         <p className="max-w-3xl text-lg font-normal leading-relaxed text-[#444444b2] md:text-xl">
           Elige la opción que mejor se ajusta a tu caso. Sin costos ocultos ni
@@ -69,6 +70,21 @@ export default function PricingTutelas() {
                   {plan.description}
                 </p>
 
+                {/* Features List */}
+                <ul className="flex flex-col gap-3 mt-2">
+                  {plan.features?.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#003df51a]">
+                        <Icon 
+                          icon="heroicons:check-20-solid" 
+                          className="text-sm text-[#003df5]" 
+                        />
+                      </div>
+                      <span className="text-sm text-[#444444cc]">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
                 {/* Price */}
                 <div className="mt-auto pt-4 flex items-baseline text-[#444444]">
                   {plan.price.includes(".") ? (
@@ -87,6 +103,7 @@ export default function PricingTutelas() {
 
                 {/* Action Button */}
                 <Button
+                  onPress={() => window.open('https://wa.me/573052578933', '_blank')}
                   size="lg"
                   className="w-full text-lg rounded-lg font-semibold transition-all text-[#003df5] border border-[#003df5]"
                   variant="outline"
@@ -107,6 +124,11 @@ const pricingPlans = [
     title: "Derecho de petición",
     description:
       "Te ayudamos a redactar tu Derecho de Petición de forma clara, para exigir respuestas oportunas y cumplir con la normativa vigente.",
+    features: [
+      "Documento descargable",
+      "Estructura legal base",
+      "100% gratuito",
+    ],
     price: "$0",
     buttonText: "Iniciar mi caso",
     primary: false,
@@ -114,9 +136,14 @@ const pricingPlans = [
     isRecommended: false,
   },
   {
-    title: "Tutela",
+    title: "Tutela Ya",
     description:
-      "Incluye la redacción de tu acción de tutela, estructurada de forma clara y adecuada para su radicación ante la autoridad competente.",
+      "Cuéntanos tu caso para redactar y radicar una acción de tutela estructurada de forma clara. Plan efectivo para casos sencillos.",
+    features: [
+      "Todo lo de plan gratuito",
+      "Redacción profesional",
+      "Radicación oficial",
+    ],
     price: "$50.000",
     buttonText: "Iniciar mi caso",
     primary: true,
@@ -124,9 +151,14 @@ const pricingPlans = [
     isRecommended: false,
   },
   {
-    title: "Tutela + Asesoría",
+    title: "Tutela Acompañada",
     description:
-      "Además de la redacción de la tutela, recibes orientación legal para entender tu caso, saber qué esperar y tomar decisiones informadas en cada etapa.",
+      "Todo lo incluido en Tutela Ya. Además, recibes orientación legal constante de nuestro equipo para que entiendas qué esperar de tu caso y poder tomar decisiones informadas en cada etapa.",
+    features: [
+      "Todo lo de Tutela Ya",
+      "Acompañamiento legal constante",
+      "Decisiones informadas",
+    ],
     price: "$120.000",
     buttonText: "Iniciar mi caso",
     primary: true,
@@ -134,9 +166,14 @@ const pricingPlans = [
     isRecommended: false,
   },
   {
-    title: "Tutela Integral",
+    title: "Gestión total de la Tutela",
     description:
-      "Nos encargamos de tu tutela, la asesoría jurídica y trámites adicionales necesarios para defender tus derechos de forma integral y efectiva.",
+      "Asumimos la gestión integral del proceso en todas las instancias a las que pueda escalar el caso, desde la primera decisión hasta eventuales impugnaciones, defendiendo tus derechos con todas las herramientas que permite la ley.",
+    features: [
+      "Todo lo de Tutela Acompañada",
+      "Gestión total de instancias",
+      "Defensa legal completa",
+    ],
     price: "$300.000",
     buttonText: "Iniciar mi caso",
     primary: true,

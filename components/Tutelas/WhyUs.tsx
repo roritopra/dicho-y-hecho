@@ -28,16 +28,16 @@ export default function WhyUs() {
       >
         <div className="flex flex-col items-center gap-1">
           <span className="text-base font-normal text-[#003df5]">
-            Acceso real a la justicia
+            Justicia clara, rápida y acompañada
           </span>
-          <h2 className="text-3xl font-medium text-[#212d51] md:text-4xl">
-            ¿Por qué nosotros?
+          <h2 className="text-3xl md:text-5xl font-semibold text-[#212d51] mb-6 tracking-tight">
+            ¿Qué es <span className="text-[#003df5]">Dicho y Hecho?</span>
           </h2>
         </div>
         <p className="max-w-2xl text-lg font-normal leading-relaxed text-[#444444b2]">
-          Facilitamos el acceso a soluciones legales claras y confiables,
-          combinando tecnología y acompañamiento experto para que puedas ejercer
-          tus derechos de forma sencilla, rápida y sin fricciones.
+          Somos una organización que combina la mejor tecnología y
+          acompañamiento legal experto para que inicies tus procesos de manera
+          eficiente, evitando retrasos causados por errores o trámites eternos.
         </p>
       </motion.div>
 

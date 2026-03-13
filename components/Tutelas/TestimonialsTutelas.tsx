@@ -14,16 +14,25 @@ export default function TestimonialsTutelas() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
-        className="flex w-full flex-col items-center gap-4"
+        className="flex w-full flex-col items-center gap-6"
       >
-        <h2 className="text-3xl font-medium text-[#212d51] md:text-4xl">
-          El primer paso para defender tus derechos es gratuito
+        <h2 className="text-3xl md:text-5xl font-semibold text-[#212d51] mb-6 tracking-tight leading-tight">
+          Empieza a defender tus derechos
+          <br />
+          <span className="text-[#003df5]">sin costo</span>
         </h2>
-        <p className="max-w-2xl text-lg font-normal leading-relaxed text-[#444444b2]">
-          Creemos que exigir tus derechos no debería tener barreras. Por eso
-          ponemos a tu disposición una herramienta que te permite redactar
-          Derechos de Petición cumpliendo con la normativa vigente.
-        </p>
+        <div className="flex flex-col items-center gap-4 mt-2">
+          <p className="text-lg md:text-xl font-normal text-[#444444]">
+            Exigir tus derechos no debería ser un problema más.
+          </p>
+          <p className="max-w-2xl text-lg md:text-xl font-normal text-[#444444]">
+            Usa nuestra herramienta{" "}
+            <span className="font-bold text-black">totalmente gratuita</span>{" "}
+            para redactar
+            <br className="hidden md:block" />
+            Derechos de Petición que cumplen con la normativa vigente.
+          </p>
+        </div>
       </motion.div>
 
       {/* Action Button */}
@@ -32,23 +41,25 @@ export default function TestimonialsTutelas() {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="flex flex-col items-center gap-4"
+        className="flex flex-col items-center gap-8 mt-2"
       >
         <Button
+          onPress={() => window.open("https://wa.me/573052578933", "_blank")}
           variant="outline"
-          className="h-12 border-2 border-[#003df5] rounded-lg bg-transparent px-8 text-lg font-semibold text-[#003df5] transition-all hover:bg-[#003df5] hover:text-white"
+          className="h-14 border-2 border-black rounded-full bg-white px-8 md:px-10 text-lg md:text-xl font-medium text-black shadow-none hover:bg-gray-50 transition-colors"
         >
           Crear derecho de petición
         </Button>
-        <div className="flex items-center gap-2 text-lg font-normal text-[#212d51]">
-          <Icon
-            icon="heroicons:rocket-launch"
-            className="text-2xl text-[#0042e9]"
-          />
-          <p className="flex items-center gap-1 text-base md:text-lg">
-            <span className="font-bold text-[#0042e9]">100% gratis,</span> en
-            línea y sin filas ni papeleo
-          </p>
+        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mt-2">
+          <div className="rounded-full bg-[#3b82f6] px-6 md:px-8 py-2 md:py-3 text-base md:text-lg font-bold text-white shadow-sm hover:-translate-y-1 transition-transform">
+            Sin filas
+          </div>
+          <div className="rounded-full bg-[#3b82f6] px-6 md:px-8 py-2 md:py-3 text-base md:text-lg font-bold text-white shadow-sm hover:-translate-y-1 transition-transform">
+            100% Gratis
+          </div>
+          <div className="rounded-full bg-[#3b82f6] px-6 md:px-8 py-2 md:py-3 text-base md:text-lg font-bold text-white shadow-sm hover:-translate-y-1 transition-transform">
+            Sin papeleo
+          </div>
         </div>
       </motion.div>
 
@@ -74,8 +85,9 @@ export default function TestimonialsTutelas() {
           transition={{ duration: 0.6 }}
           className="flex flex-col gap-3"
         >
-          <h2 className="text-3xl font-medium text-[#212d51]">
-            Casos reales atendidos por nuestro equipo jurídico
+          <h2 className="text-3xl md:text-5xl font-semibold text-[#212d51] mb-6 tracking-tight">
+            Tu confianza es nuestra{" "}
+            <span className="text-[#003df5]">prioridad</span>
           </h2>
           <p className="text-lg font-normal text-[#444444b2]">
             Casos reales atendidos por nuestro equipo jurídico
