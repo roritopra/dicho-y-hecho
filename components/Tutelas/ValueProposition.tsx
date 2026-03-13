@@ -80,7 +80,7 @@ export default function ValueProposition() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className={`rounded-[2rem] p-8 flex flex-col transition-transform hover:-translate-y-2 cursor-default ${
+            className={`rounded-[2rem] p-8 flex flex-col items-center transition-transform hover:-translate-y-2 cursor-default ${
               card.primary
                 ? "bg-linear-to-b from-[#0055ee] to-[#003df5] text-white shadow-xl shadow-blue-500/20"
                 : "bg-[#f8f9fb] text-[#212d51] border border-gray-100 shadow-sm hover:shadow-md"
@@ -95,11 +95,11 @@ export default function ValueProposition() {
             >
               <Icon icon={card.icon} className="text-3xl" />
             </div>
-            <h3 className="text-2xl font-bold mb-4 leading-tight">
+            <h3 className="text-2xl text-center font-bold mb-4 leading-tight">
               {card.title}
             </h3>
             <p
-              className={`leading-relaxed text-base ${
+              className={`text-center leading-relaxed text-base ${
                 card.primary ? "text-white/90" : "text-[#444444b2]"
               }`}
             >

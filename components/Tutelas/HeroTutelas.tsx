@@ -62,15 +62,15 @@ export default function HeroTutelas() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex flex-col items-center gap-6"
         >
-          <div className="flex items-center gap-5">
-            <p className="text-start text-[#0069f3]">
-              Sin trámites <b>confusos</b> <br />
-              sin costos <b>ocultos</b> <br />
+          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-5">
+            <p className="text-center md:text-start text-[#0069f3]">
+              Sin trámites <b>confusos</b> <br className="hidden md:block" />
+              sin costos <b>ocultos</b> <br className="hidden md:block" />
               100% <b>WhatsApp</b>
             </p>
             <Button 
               onPress={() => window.open('https://wa.me/573052578933', '_blank')}
-              className="h-14 bg-linear-to-r from-[#0042e9] via-[#0069f3] to-[#0071f5] px-10 text-xl font-semibold text-white shadow-2xl shadow-blue-500/30 rounded-lg"
+              className="h-14 w-full md:w-auto bg-linear-to-r from-[#0042e9] via-[#0069f3] to-[#0071f5] px-10 text-xl font-semibold text-white shadow-2xl shadow-blue-500/30 rounded-lg"
             >
               Empezar mi caso en WhatsApp
               <Icon icon="heroicons-mini/arrow-up-right" className="text-2xl" />
