@@ -1,5 +1,6 @@
 import HeroTutelas from "@/components/Tutelas/HeroTutelas";
 import LogicalProof from "@/components/Tutelas/LogicalProof";
+import ValueProposition from "@/components/Tutelas/ValueProposition";
 import TestimonialsTutelas from "@/components/Tutelas/TestimonialsTutelas";
 import WhyUs from "@/components/Tutelas/WhyUs";
 import ProcessTutela from "@/components/Tutelas/ProcessTutela";
@@ -12,6 +13,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col">
       <HeroTutelas />
       <LogicalProof />
+      <ValueProposition />
       <TestimonialsTutelas />
       <WhyUs />
       <ProcessTutela />
