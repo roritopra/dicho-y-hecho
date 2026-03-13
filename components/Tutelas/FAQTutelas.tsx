@@ -108,7 +108,7 @@ export default function FAQTutelas() {
                     {faq.question}
                   </span>
                   <Accordion.Indicator>
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white shadow-sm border border-gray-100 flex-shrink-0">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white shadow-sm border border-gray-100 shrink-0">
                       <Icon
                         icon="heroicons:chevron-down-20-solid"
                         className="text-xl text-[#003df5]"
