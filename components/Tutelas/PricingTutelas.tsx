@@ -103,6 +103,7 @@ export default function PricingTutelas() {
 
                 {/* Action Button */}
                 <Button
+                  onPress={() => window.open('https://wa.me/573052578933', '_blank')}
                   size="lg"
                   className="w-full text-lg rounded-lg font-semibold transition-all text-[#003df5] border border-[#003df5]"
                   variant="outline"

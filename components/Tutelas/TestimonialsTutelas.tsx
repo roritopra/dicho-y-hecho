@@ -40,6 +40,7 @@ export default function TestimonialsTutelas() {
         className="flex flex-col items-center gap-8 mt-2"
       >
         <Button
+          onPress={() => window.open('https://wa.me/573052578933', '_blank')}
           variant="outline"
           className="h-14 border-2 border-black rounded-full bg-white px-8 md:px-10 text-lg md:text-xl font-medium text-black shadow-none hover:bg-gray-50 transition-colors"
         >

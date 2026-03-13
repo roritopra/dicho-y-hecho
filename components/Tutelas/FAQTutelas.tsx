@@ -79,6 +79,7 @@ export default function FAQTutelas() {
             responderemos lo antes posible!
           </p>
           <Button
+            onPress={() => window.open('https://wa.me/573052578933', '_blank')}
             size="lg"
             className="mt-2 w-full sm:w-max rounded-xl bg-linear-to-r from-[#0042e9] via-[#0055ee] to-[#0071f5] text-base font-semibold text-white shadow-lg transition-transform hover:-translate-y-1 hover:shadow-xl active:scale-95"
           >

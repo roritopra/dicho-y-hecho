@@ -66,7 +66,10 @@ export default function Navbar() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="hidden md:block"
           >
-            <Button className="bg-linear-to-r py-6 from-[#0042e9] via-[#0069f3] to-[#0071f5] px-6 text-lg font-medium text-white shadow-blue-500/20 rounded-lg">
+            <Button 
+              onPress={() => window.open('https://wa.me/573052578933', '_blank')}
+              className="bg-linear-to-r py-6 from-[#0042e9] via-[#0069f3] to-[#0071f5] px-6 text-lg font-medium text-white shadow-blue-500/20 rounded-lg"
+            >
               Empezar mi caso
             </Button>
           </motion.div>
@@ -129,9 +132,12 @@ export default function Navbar() {
                 className="mt-4"
               >
                 <Button
+                  onPress={() => {
+                    setIsOpen(false);
+                    window.open('https://wa.me/573052578933', '_blank');
+                  }}
                   fullWidth
                   className="bg-linear-to-r h-16 from-[#0042e9] via-[#0069f3] to-[#0071f5] text-xl font-bold text-white shadow-lg rounded-xl"
-                  onClick={() => setIsOpen(false)}
                 >
                   Empezar mi caso
                 </Button>

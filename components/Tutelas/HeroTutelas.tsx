@@ -68,7 +68,10 @@ export default function HeroTutelas() {
               sin costos <b>ocultos</b> <br />
               100% <b>WhatsApp</b>
             </p>
-            <Button className="h-14 bg-linear-to-r from-[#0042e9] via-[#0069f3] to-[#0071f5] px-10 text-xl font-semibold text-white shadow-2xl shadow-blue-500/30 rounded-lg">
+            <Button 
+              onPress={() => window.open('https://wa.me/573052578933', '_blank')}
+              className="h-14 bg-linear-to-r from-[#0042e9] via-[#0069f3] to-[#0071f5] px-10 text-xl font-semibold text-white shadow-2xl shadow-blue-500/30 rounded-lg"
+            >
               Empezar mi caso en WhatsApp
               <Icon icon="heroicons-mini/arrow-up-right" className="text-2xl" />
             </Button>
