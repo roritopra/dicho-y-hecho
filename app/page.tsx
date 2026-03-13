@@ -3,6 +3,7 @@ import TestimonialsTutelas from "@/components/Tutelas/TestimonialsTutelas";
 import WhyUs from "@/components/Tutelas/WhyUs";
 import ProcessTutela from "@/components/Tutelas/ProcessTutela";
 import PricingTutelas from "@/components/Tutelas/PricingTutelas";
+import FAQTutelas from "@/components/Tutelas/FAQTutelas";
 import ContactForm from "@/components/shared/ContactForm";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <WhyUs />
       <ProcessTutela />
       <PricingTutelas />
+      <FAQTutelas />
       <ContactForm />
     </main>
   );
