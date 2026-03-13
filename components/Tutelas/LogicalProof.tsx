@@ -16,7 +16,7 @@ export default function LogicalProof() {
         className="mb-12 flex flex-col items-center text-center"
       >
         <h2 className="text-3xl md:text-5xl font-semibold text-[#212d51] mb-6 tracking-tight">
-          Resultados comprobados
+          Resultados <span className="text-[#003df5]">comprobados</span>
         </h2>
         <p className="text-base md:text-lg text-[#444444b2] max-w-2xl leading-relaxed">
           Nuestras métricas hablan por sí solas. Organiza, prioriza y mantén el

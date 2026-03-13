@@ -32,13 +32,13 @@ export default function HeroTutelas() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="space-y-2"
         >
-          <h1 className="text-5xl font-semibold tracking-[-4%] text-[#212d51] md:text-7xl">
+          <h1 className="text-5xl font-semibold tracking-tight text-[#212d51] md:text-7xl">
             Defiende tus derechos
-            <span className="flex items-center justify-center gap-2">
+            <span className="flex items-center justify-center gap-2 text-[#003df5]">
               desde tu celular
               <Icon
                 icon="heroicons:cursor-arrow-rays"
-                className="text-4xl text-[#003df5] md:text-6xl"
+                className="text-4xl md:text-6xl"
               />
             </span>
           </h1>
