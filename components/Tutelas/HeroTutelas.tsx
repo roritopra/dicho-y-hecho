@@ -33,9 +33,9 @@ export default function HeroTutelas() {
           className="space-y-2"
         >
           <h1 className="text-5xl font-semibold tracking-[-4%] text-[#212d51] md:text-7xl">
-            Justicia eficiente
+            Defiende tus derechos
             <span className="flex items-center justify-center gap-2">
-              al alcance de un clic
+              desde tu celular
               <Icon
                 icon="heroicons:cursor-arrow-rays"
                 className="text-4xl text-[#003df5] md:text-6xl"
@@ -51,9 +51,8 @@ export default function HeroTutelas() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-3xl text-lg font-light leading-relaxed text-[#444444b2] md:text-xl"
         >
-          Gestionamos tus tutelas, multas y derechos de petición con tecnología
-          experta y respaldo jurídico profesional. Sin trámites confusos ni
-          costos ocultos.
+          Gestionamos tus tutelas y derechos de petición con la mejor tecnología
+          y respaldo jurídico profesional.
         </motion.p>
 
         {/* Action Button */}
@@ -63,10 +62,17 @@ export default function HeroTutelas() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex flex-col items-center gap-6"
         >
-          <Button className="h-14 bg-linear-to-r from-[#0042e9] via-[#0069f3] to-[#0071f5] px-10 text-xl font-semibold text-white shadow-2xl shadow-blue-500/30 rounded-lg">
-            Empezar mi caso
-            <Icon icon="heroicons-mini/arrow-up-right" className="text-2xl" />
-          </Button>
+          <div className="flex items-center gap-5">
+            <p className="text-start text-[#0069f3]">
+              Sin trámites <b>confusos</b> <br />
+              sin costos <b>ocultos</b> <br />
+              100% <b>WhatsApp</b>
+            </p>
+            <Button className="h-14 bg-linear-to-r from-[#0042e9] via-[#0069f3] to-[#0071f5] px-10 text-xl font-semibold text-white shadow-2xl shadow-blue-500/30 rounded-lg">
+              Empezar mi caso en WhatsApp
+              <Icon icon="heroicons-mini/arrow-up-right" className="text-2xl" />
+            </Button>
+          </div>
 
           {/* Validation */}
           <div className="flex items-center gap-2 text-sm font-medium text-[#444444b2] md:text-base">
