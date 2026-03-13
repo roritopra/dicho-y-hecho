@@ -16,9 +16,9 @@ export default function TestimonialsTutelas() {
         transition={{ duration: 0.6 }}
         className="flex w-full flex-col items-center gap-6"
       >
-        <h2 className="text-3xl font-medium text-[#212d51] md:text-4xl leading-tight">
+        <h2 className="text-3xl md:text-5xl font-semibold text-[#212d51] mb-6 tracking-tight leading-tight">
           Empieza a defender tus derechos<br />
-          <span className="text-[#0042e9]">sin costo</span>
+          <span className="text-[#003df5]">sin costo</span>
         </h2>
         <div className="flex flex-col items-center gap-4 mt-2">
           <p className="text-lg md:text-xl font-normal text-[#444444]">
@@ -81,8 +81,8 @@ export default function TestimonialsTutelas() {
           transition={{ duration: 0.6 }}
           className="flex flex-col gap-3"
         >
-          <h2 className="text-3xl font-medium text-[#212d51]">
-            Tu confianza es nuestra prioridad
+          <h2 className="text-3xl md:text-5xl font-semibold text-[#212d51] mb-6 tracking-tight">
+            Tu confianza es nuestra <span className="text-[#003df5]">prioridad</span>
           </h2>
           <p className="text-lg font-normal text-[#444444b2]">
             Casos reales atendidos por nuestro equipo jurídico

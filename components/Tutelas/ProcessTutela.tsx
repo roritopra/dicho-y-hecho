@@ -40,8 +40,8 @@ export default function ProcessTutela() {
         transition={{ duration: 0.6 }}
         className="flex flex-col items-center gap-4 text-center"
       >
-        <h2 className="text-2xl font-medium text-[#212d51] md:text-4xl">
-          Así llevamos tu proceso
+        <h2 className="text-3xl md:text-5xl font-semibold text-[#212d51] mb-6 tracking-tight">
+          Así llevamos <span className="text-[#003df5]">tu proceso</span>
         </h2>
         <p className="max-w-2xl text-lg font-normal leading-relaxed text-[#212d51] md:text-xl">
           Te acompañamos paso a paso, con un proceso claro, sencillo y sin

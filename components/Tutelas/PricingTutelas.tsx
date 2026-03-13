@@ -15,8 +15,8 @@ export default function PricingTutelas() {
         transition={{ duration: 0.6 }}
         className="flex flex-col items-center gap-4 text-center"
       >
-        <h2 className="text-3xl font-medium text-[#444444] md:text-5xl">
-          Planes claros para ejercer tus derechos
+        <h2 className="text-3xl md:text-5xl font-semibold text-[#212d51] mb-6 tracking-tight">
+          Planes claros para <span className="text-[#003df5]">ejercer tus derechos</span>
         </h2>
         <p className="max-w-3xl text-lg font-normal leading-relaxed text-[#444444b2] md:text-xl">
           Elige la opción que mejor se ajusta a tu caso. Sin costos ocultos ni

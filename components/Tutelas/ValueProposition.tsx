@@ -46,8 +46,8 @@ export default function ValueProposition() {
         className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 mb-16"
       >
         <div className="lg:w-1/2">
-          <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-[#212d51] leading-[1.1] tracking-tight max-w-lg">
-            Rigor jurídico con precios justos
+          <h2 className="text-3xl md:text-5xl font-semibold text-[#212d51] mb-6 tracking-tight max-w-lg">
+            Rigor jurídico con <span className="text-[#003df5]">precios justos</span>
           </h2>
         </div>
         <div className="lg:w-1/2 flex flex-col items-start gap-6">

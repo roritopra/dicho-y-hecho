@@ -70,8 +70,8 @@ export default function ContactForm() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="flex flex-col gap-4 text-center lg:text-left items-center lg:items-start"
           >
-            <h2 className="text-3xl font-semibold text-[#212d51] md:text-[2.5rem] tracking-tight leading-tight">
-              ¿Necesitas ayuda para escoger un plan?
+            <h2 className="text-3xl md:text-5xl font-semibold text-[#212d51] mb-6 tracking-tight leading-tight">
+              ¿Necesitas ayuda para <span className="text-[#003df5]">escoger un plan?</span>
             </h2>
             <div className="mt-1 rounded-full bg-[#3b82f6] px-6 py-2 md:py-3 text-xl md:text-2xl font-semibold text-white shadow-sm">
               Contáctanos para asesorarte

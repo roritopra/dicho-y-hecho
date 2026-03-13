@@ -64,9 +64,9 @@ export default function FAQTutelas() {
             Dicho y Hecho Asesoría Legal
           </div>
           
-          <h2 className="text-4xl font-semibold text-[#212d51] md:text-5xl lg:text-6xl tracking-tight leading-[1.1]">
+          <h2 className="text-3xl md:text-5xl font-semibold text-[#212d51] mb-6 tracking-tight leading-[1.1]">
             Preguntas
-            <br className="hidden lg:block" /> frecuentes
+            <br className="hidden lg:block" /> <span className="text-[#003df5]">frecuentes</span>
           </h2>
         </div>
 

@@ -30,8 +30,8 @@ export default function WhyUs() {
           <span className="text-base font-normal text-[#003df5]">
             Justicia clara, rápida y acompañada
           </span>
-          <h2 className="text-3xl font-medium text-[#212d51] md:text-4xl">
-            ¿Qué es Dicho y Hecho?
+          <h2 className="text-3xl md:text-5xl font-semibold text-[#212d51] mb-6 tracking-tight">
+            ¿Qué es <span className="text-[#003df5]">Dicho y Hecho?</span>
           </h2>
         </div>
         <p className="max-w-2xl text-lg font-normal leading-relaxed text-[#444444b2]">
