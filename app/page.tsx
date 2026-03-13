@@ -14,9 +14,9 @@ export default function Home() {
       <HeroTutelas />
       <LogicalProof />
       <ValueProposition />
+      <ProcessTutela />
       <TestimonialsTutelas />
       <WhyUs />
-      <ProcessTutela />
       <PricingTutelas />
       <FAQTutelas />
       <ContactForm />
