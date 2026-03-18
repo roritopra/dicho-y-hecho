@@ -163,19 +163,16 @@ const testimonials = [
   {
     name: "Marco Lopez",
     text: "La asesoría para mi tutela de salud fue impecable. No solo redactaron el documento, sino que el abogado me explicó con paciencia qué esperar del proceso. Logramos la cirugía en tiempo récord.",
-    image:
-      "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=400&auto=format&fit=crop",
+    image: "/testimonials1.png",
   },
   {
     name: "Luisa Torres",
     text: "Me ayudaron con una tutela de salud. No solo redactaron el documento, también me explicaron todo el proceso con claridad. Gracias a eso, obtuve respuesta rápidamente.",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop",
+    image: "/testimonials2.png",
   },
   {
-    name: "Andrea Caicedo",
+    name: "Andres Caicedo",
     text: "Cuando tuvimos problemas con la EPS, estábamos muy perdidos al inicio. Recibimos una orientación clara y un acompañamiento constante que hizo que todo fuera mucho más fácil.",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop",
+    image: "/testimonials3.jpeg",
   },
 ];
